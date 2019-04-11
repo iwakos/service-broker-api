@@ -1,0 +1,9 @@
+applications:
+- name: service-broker-app-api2
+  memory: 1G 
+  instances: 1
+  path: build/libs/server-0.0.1-SNAPSHOT.jar
+  buildpacks:
+    - java_buildpack_offline
+  env:
+    PGSSLROOTCERT: /home/vcap/app/BOOT-INF/classes/config/root.crt
